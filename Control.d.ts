@@ -26,7 +26,8 @@ export interface Control_Params {
 	params?: Control_Params | undefined;
 }
 
-export class Control extends Class {
+export class Control {
+	prototype: Control;
 	static instanceCounter?: number | undefined;
 	defaultActiveArguments: Container_Arguments;
 	defaults: Control_Params;
