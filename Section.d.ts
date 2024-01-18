@@ -12,6 +12,7 @@ export class Section extends Container {
     containerPaneParent: string;
     id: string;
     panel: Value<string>;
+    params: Section_Params;
     initialize(id?: string, options?: Section_Params): void;
     embed(): void;
     attachEvents(): void;
