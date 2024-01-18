@@ -43,7 +43,7 @@ export class Control extends Class {
 	notifications: Notifications;
 	elements: Element[];
 	settings: Control_Settings;
-	extend(protoProps: object, classProps: object): Class;
+	extend(protoProps: object, classProps?: object): Class;
 	initialize(id?: string, options?: Control_Params): void;
 	linkElements(): void;
 	embed(): void;
