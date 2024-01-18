@@ -29,31 +29,41 @@ export interface HandleSettingValiditiesArgs {
 }
 
 export interface Customize extends Values<Setting<any>> {
-    _latestRevision: number;
-    _lastSavedRevision: number;
-    _latestSettingRevision: Record<string, number>;
-    // (a: any, b?: any): any; // TODO
+	_latestRevision: number;
+	_lastSavedRevision: number;
+	_latestSettingRevision: Record<string, number>;
+	// (a: any, b?: any): any; // TODO
 
-    utils: Utils;
-    ensure(element: string | JQuery): JQuery;
-    dirtyValues(options?: DirtyValuesOptions): Record<string, any>;
-    requestChangesetUpdate(changes?: Record<string, any>, args?: RequestChangesetUpdateOptions): JQuery.Promise<any>;
-    get(): Record<string, any>;
-    defaultConstructor: Setting<Class>;
-    control: Values<Control>;
-    section: Values<Section>;
-    panel: Values<Panel>;
-    notifications: Notifications;
-    setDocumentTitle(documentTitle: string): void;
-    settingConstructor: Setting_Constructor;
-    controlConstructor: Control_Constructor;
-    panelConstructor: Panel_Constructor;
-    sectionConstructor: Section_Constructor;
-    _handleSettingValidities(args: HandleSettingValiditiesArgs): void;
-    findControlsForSettings(settingIds: readonly string[]): Record<string, Control>;
-    reflowPaneContents(): void;
-    state: Values<Class>;
-    settings: any; // TODO
-    l10n: Record<string, string>;
-    previewer: Previewer<string>;
+	utils: Utils;
+	ensure(element: string | JQuery): JQuery;
+	dirtyValues(options?: DirtyValuesOptions): Record<string, any>;
+	requestChangesetUpdate(
+		changes?: Record<string, any>,
+		args?: RequestChangesetUpdateOptions
+	): JQuery.Promise<any>;
+	get(): Record<string, any>;
+	defaultConstructor: Setting<Class>;
+	control: Values<Control>;
+	section: Values<Section>;
+	panel: Values<Panel>;
+	notifications: Notifications;
+	setDocumentTitle(documentTitle: string): void;
+	settingConstructor: Setting_Constructor;
+	controlConstructor: Control_Constructor;
+	panelConstructor: Panel_Constructor;
+	sectionConstructor: Section_Constructor;
+	_handleSettingValidities(args: HandleSettingValiditiesArgs): void;
+	findControlsForSettings(
+		settingIds: readonly string[]
+	): Record<string, Control>;
+	reflowPaneContents(): void;
+	state: Values<Class>;
+	settings: any; // TODO
+	l10n: Record<string, string>;
+	previewer: Previewer<string>;
+
+	// Added by @contactjavas which himself not sure about the type
+    // TODO: Not really to do, just noting it down :)
+	Control: Control;
+	[key: string]: any;
 }
