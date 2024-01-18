@@ -4,29 +4,29 @@ import { Notifications } from "./Notifications";
 import { Setting } from "./Setting";
 import { Value } from "./Value";
 
-export type Control_Settings = (Record<string, Setting<any> | Value<any>> | Array<Setting<any> | Value<any>>) & {
-    default?: string | Setting<any> | undefined;
+export type Control_Settings = (
+	| Record<string, Setting<any> | Value<any>>
+	| Array<Setting<any> | Value<any>>
+) & {
+	default?: string | Setting<any> | undefined;
 };
 
 export interface Control_Params {
-    label: string;
-    description: string;
-    active: boolean;
-    priority: number;
-    type: any;
-    content?: string | undefined;
-    templateId?: string | undefined;
-    section: string;
-    setting?: string | Setting<any> | undefined;
-    settings: Control_Settings;
-    instanceNumber?: number | undefined;
-    params?: Control_Params | undefined;
+	label: string;
+	description: string;
+	active: boolean;
+	priority: number;
+	type: any;
+	content?: string | undefined;
+	templateId?: string | undefined;
+	section: string;
+	setting?: string | Setting<any> | undefined;
+	settings: Control_Settings;
+	instanceNumber?: number | undefined;
+	params?: Control_Params | undefined;
 }
 
 export class Control extends Class {
-	// From Class
-	static extend(protoProps: object, classProps: object): typeof Class;
-
 	static instanceCounter?: number | undefined;
 	defaultActiveArguments: Container_Arguments;
 	defaults: Control_Params;
@@ -43,6 +43,7 @@ export class Control extends Class {
 	notifications: Notifications;
 	elements: Element[];
 	settings: Control_Settings;
+	extend(protoProps: object, classProps: object): Class;
 	initialize(id?: string, options?: Control_Params): void;
 	linkElements(): void;
 	embed(): void;
