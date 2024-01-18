@@ -1,7 +1,7 @@
 # `wp.customize` typings
 
 ## Credits
-This package is a "copy-then-modify" version of [@types/wordpress__customize-browser](https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/wordpress__customize-browser). These definitions were written by [Marek Dědič]([text](https://github.com/marekdedic))
+This package is a "copy-then-modify" version of [@types/wordpress__customize-browser](https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/wordpress__customize-browser). These definitions were written by [Marek Dědič](https://github.com/marekdedic)
 
 ## Intro
 
