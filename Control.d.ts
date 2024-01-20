@@ -1,5 +1,6 @@
 import { Class } from "./Class";
 import { Container_Arguments, Container_Deferred } from "./Container";
+import { Element } from "./Element";
 import { Notifications } from "./Notifications";
 import { Setting } from "./Setting";
 import { Value } from "./Value";
@@ -46,7 +47,7 @@ export class Control {
 	elements: Element[];
 	settings: Control_Settings;
 	setting?: string | Setting<any> | undefined;
-	propertyElements: Array<JQueryStatic>;
+	propertyElements: Array<Element>;
 	extend(protoProps: object, classProps?: object): Class;
 	initialize(id?: string, options?: Control_Params): void;
 	linkElements(): void;
