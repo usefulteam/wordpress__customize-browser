@@ -65,5 +65,6 @@ export interface Customize extends Values<Setting<any>> {
 	// Added by @contactjavas which himself not sure about the type
     // TODO: Not really to do, just noting it down :)
 	Control: Control;
+	Element: JQueryStatic;
 	[key: string]: any;
 }
