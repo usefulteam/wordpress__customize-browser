@@ -1,6 +1,7 @@
 import { Class } from "./Class";
 import { Control } from "./Control";
 import { Control_Constructor } from "./Control_Constructor";
+import { Element } from "./Element";
 import { Notifications } from "./Notifications";
 import { Panel } from "./Panel";
 import { Panel_Constructor } from "./Panel_Constructor";
@@ -13,19 +14,19 @@ import { Utils } from "./Utils";
 import { Values } from "./Values";
 
 export interface DirtyValuesOptions {
-    unsaved?: boolean | undefined;
+	unsaved?: boolean | undefined;
 }
 
 export interface RequestChangesetUpdateOptions {
-    autosave?: boolean | undefined;
-    force?: boolean | undefined;
-    title?: string | undefined;
-    date?: string | undefined;
+	autosave?: boolean | undefined;
+	force?: boolean | undefined;
+	title?: string | undefined;
+	date?: string | undefined;
 }
 
 export interface HandleSettingValiditiesArgs {
-    settingValidities: Record<string, any>; // TODO
-    focusInvalidControl?: boolean | undefined;
+	settingValidities: Record<string, any>; // TODO
+	focusInvalidControl?: boolean | undefined;
 }
 
 export interface Customize extends Values<Setting<any>> {
@@ -63,8 +64,8 @@ export interface Customize extends Values<Setting<any>> {
 	previewer: Previewer<string>;
 
 	// Added by @contactjavas which himself not sure about the type
-    // TODO: Not really to do, just noting it down :)
+	// TODO: Not really to do, just noting it down :)
 	Control: Control;
-	Element: JQueryStatic;
+	Element: Element;
 	[key: string]: any;
 }
