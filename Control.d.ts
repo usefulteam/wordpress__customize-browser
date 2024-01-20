@@ -23,6 +23,7 @@ export interface Control_Params {
 	setting?: string | Setting<any> | undefined;
 	settings: Control_Settings;
 	instanceNumber?: number | undefined;
+	[key: string]: any;
 	params?: Control_Params | undefined;
 }
 
