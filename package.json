@@ -24,9 +24,9 @@
     },
     "scripts": {},
     "dependencies": {
-        "@types/jquery": "*"
+        "@types/jquery": "^3.5.29"
     },
     "typesPublisherContentHash": "81343fd33939f106086657ddda3136feedf5ac2d6191014ced8707439ae88119",
-    "typeScriptVersion": "4.5",
+    "typeScriptVersion": "^5.3",
     "nonNpm": true
 }
