@@ -45,6 +45,7 @@ export class Control {
 	notifications: Notifications;
 	elements: Element[];
 	settings: Control_Settings;
+	setting?: string | Setting<any> | undefined;
 	extend(protoProps: object, classProps?: object): Class;
 	initialize(id?: string, options?: Control_Params): void;
 	linkElements(): void;
