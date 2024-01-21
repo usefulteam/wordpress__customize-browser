@@ -48,7 +48,7 @@ export class Control {
 	settings: Control_Settings;
 	setting?: string | Setting<any> | undefined;
 	propertyElements: Array<Element>;
-	extend(protoProps: object, classProps?: object): Class;
+	extend(protoProps: object, classProps?: object): Control;
 	initialize(id?: string, options?: Control_Params): void;
 	linkElements(): void;
 	embed(): void;
