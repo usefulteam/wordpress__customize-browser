@@ -25,5 +25,4 @@ export interface Control_Constructor {
     theme: typeof ThemeControl;
     date_time: typeof DateTimeControl;
     code_editor: typeof CodeEditorControl;
-    [key: string]: typeof Control;
 }
