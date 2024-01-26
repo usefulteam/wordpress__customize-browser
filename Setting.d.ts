@@ -9,7 +9,6 @@ export interface Setting_Options {
 }
 
 export class Setting<T> extends Value<T> {
-	bind(...args: Array<JQuery.TypeOrArray<(to: T, from: T) => void>>): this;
 	defaults: Setting_Options;
 	initialize(
 		id?: string,
