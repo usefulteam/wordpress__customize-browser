@@ -2,6 +2,7 @@ import { BackgroundControl } from "./BackgroundControl";
 import { BackgroundPositionControl } from "./BackgroundPositionControl";
 import { CodeEditorControl } from "./CodeEditorControl";
 import { ColorControl } from "./ColorControl";
+import { Control } from "./Control";
 import { CroppedImageControl } from "./CroppedImageControl";
 import { DateTimeControl } from "./DateTimeControl";
 import { HeaderControl } from "./HeaderControl";
@@ -24,4 +25,5 @@ export interface Control_Constructor {
     theme: typeof ThemeControl;
     date_time: typeof DateTimeControl;
     code_editor: typeof CodeEditorControl;
+    [key: string]: typeof Control;
 }
