@@ -60,8 +60,8 @@ export class Control {
 	focus(params?: any): void; // TODO
 	onChangeActive(active: boolean, args: Container_Arguments): void;
 	toggle(active: boolean): void;
-	activate(params: Container_Arguments): boolean;
-	deactivate(params: Container_Arguments): boolean;
+	activate(params?: Container_Arguments): boolean;
+	deactivate(params?: Container_Arguments): boolean;
 	_toggleActive(active: boolean, params: Container_Arguments): boolean;
 	dropdownInit(): void;
 	renderContent(): void;
