@@ -11,7 +11,6 @@ export interface Setting_Options {
 export class Setting<T> extends Value<T> {
 	defaults: Setting_Options;
 	id: string;
-	get: () => T;
 	initialize(
 		id?: string,
 		value?: any,
