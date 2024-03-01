@@ -33,7 +33,7 @@ export abstract class Container extends Class {
 	templateSelector?: string | undefined;
 	container?: JQuery | undefined;
 	headContainer?: JQuery | undefined;
-	contentContainer?: typeof jQuery<HTMLElement>;
+	contentContainer?: JQuery;
 	deferred: Container_Deferred;
 	priority: Value<number>;
 	active: Value<boolean>;
