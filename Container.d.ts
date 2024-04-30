@@ -55,7 +55,7 @@ export abstract class Container extends Class {
 		args: Container_Arguments
 	): void | never;
 	_toggleExpanded(expanded: boolean, params: Container_Arguments): boolean;
-	expand(params: Container_Arguments): boolean;
+	expand(params: Container_Params): boolean;
 	collapse(params: Container_Arguments): boolean;
 	_animateChangeExpanded(completeCallback: () => void): void;
 	focus(): void;
